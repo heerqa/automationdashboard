@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+  <definition name="common" template="/WEB-INF/layout/classic.jsp">
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  
+  <definition name="home" extends="common">
+    <put-attribute name="title" value="HeerSoftware" />
+    <put-attribute name="body" value="/WEB-INF/view/home.jsp" />
+    <put-attribute name="current" value="home"/>
+  </definition>
+  
+    <definition name="automationdashboard" extends="common">
+    <put-attribute name="title" value="Automation Dashboard" />
+    <put-attribute name="body" value="/WEB-INF/view/automationdashboard.jsp" />
+    <put-attribute name="current" value="automationdashboard"/>
+  
+  </definition>
+  
+    <definition name="login" extends="common">
+    <put-attribute name="title" value="Login" />
+    <put-attribute name="body" value="/WEB-INF/view/login.jsp" />
+    <put-attribute name="current" value="login"/>
+  
+  </definition>
+  
+  
+  
+</tiles-definitions>
