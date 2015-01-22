@@ -1,0 +1,16 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="dashboardpersistence" transaction-type="RESOURCE_LOCAL">
+    	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	<!-- <class>com.zoya.model.User</class>
+    	<class>com.zoya.model.Dashboard</class>
+    	<class>com.zoya.model.DashboardTest</class>
+    	<class>com.zoya.model.DashboardTestRun</class>    
+    -->
+    	<properties>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+         <property name="hibernate.hbm2ddl.auto" value="create"/>
+         <property name="hibernate.show_sql" value="true"/>
+      </properties>
+      
+    </persistence-unit>
+</persistence>
