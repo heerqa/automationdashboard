@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import org.hibernate.mapping.Array;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -86,13 +86,13 @@ public class DashboardDaoImpl implements DashboardDao {
 	private static final class DashbaordRowMapper implements RowMapper<Dashboard>{
 
 		public Dashboard mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Dashboard dashboard=new Dashboard();
+			Dashboard dashboard=new Dashboard("testclassname", "running_method_name", 23, 21, 22, 2);
 			dashboard.setTestclassname(rs.getString("testclass"));
 			dashboard.setRunning_method_name(rs.getString("running_method_name"));
 			dashboard.setTotaltests(rs.getInt("totaltest"));
 			dashboard.setCurrenttest(rs.getInt("currenttest"));
-			dashboard.setCurrenttest(rs.getInt("test_failed"));
-			dashboard.setCurrenttest(rs.getInt("test_passed"));
+			dashboard.setTest_failed(rs.getInt("test_failed"));
+			dashboard.setTest_passed(rs.getInt("test_passed"));
 			return dashboard;
 		}
 		

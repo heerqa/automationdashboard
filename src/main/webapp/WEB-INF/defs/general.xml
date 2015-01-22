@@ -28,6 +28,26 @@
   
   </definition>
   
+  <definition name="contact" extends="common">
+    <put-attribute name="title" value="Conact Us" />
+    <put-attribute name="body" value="/WEB-INF/view/contact.jsp" />
+    <put-attribute name="current" value="contact"/>
+  
+  </definition>
+  
+  <definition name="runningtestdetails" extends="common">
+    <put-attribute name="title" value="Running Test Details" />
+    <put-attribute name="body" value="/WEB-INF/view/runningtestdetails.jsp" />
+    <put-attribute name="current" value="automationdashboard"/>
+  
+  </definition>
+  
+  <definition name="activitylog" extends="common">
+    <put-attribute name="title" value="Running Test Log" />
+    <put-attribute name="body" value="/WEB-INF/view/activitylog.jsp" />
+    <put-attribute name="current" value="automationdashboard"/>
+  
+  </definition>
   
   
 </tiles-definitions>

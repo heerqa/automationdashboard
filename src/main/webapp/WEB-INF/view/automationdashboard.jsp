@@ -21,17 +21,26 @@
 <th>Current Test</th>
 <th>Passed Tests</th>
 <th>Failed Tests</th>
+<th>Browser</th>
+<th>Activity Log</th>
+<th>Run Startedon</th>
 
 </tr>
 </thead>
 <c:forEach items="${dashboard}" var="dashboard">
 <tr>
-<td>${dashboard.testclassname} </td>
+<td><a href="${dashboard.id}/deletesingletest">
+          <span class="glyphicon glyphicon-trash" onclick="deleteSingleRow('${dashboard.id}')"></span>
+        </a> &nbsp;&nbsp;<a href="${dashboard.id}/runningtestdetails">${dashboard.testclassname} </td>
 <td>${dashboard.running_method_name} </td>
 <td>${dashboard.totaltests} </td>
 <td>${dashboard.currenttest} </td>
-<td>${dashboard.test_passed} </td>
+<td>${dashboard.test_passed } </td>
 <td>${dashboard.test_failed} </td>
+<td>${dashboard.browsername} </td>
+<td><a href="${dashboard.id}/activitylog">running test logs </td>
+<td>${dashboard.rundate} </td>
+
 </tr>
 
 </c:forEach>
@@ -67,6 +76,18 @@
 <script>
 function refreshDashboard(){
 location.href="<spring:url value="/automationdashboard.html"/>";	
+}
+
+function deleteSingleRow(id){
+	$(document).ready(function(){
+		  
+	    $.ajax({url:id+"/deletesingletest.html",success:function(result){
+	    	refreshDashboard();
+	    }
+	  });
+	});	
+	
+	
 }
 
 function deletDashboard(){
