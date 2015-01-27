@@ -83,7 +83,12 @@ public class RestController {
 		return dashboardRepository.findOne(id);
 	}
 	
-	
+	@RequestMapping(value="/updatecurrentcount/{id}/{currentcount}", method=RequestMethod.PUT)
+	public @ResponseBody Dashboard updatecCurrentCount(@PathVariable("id") Integer id,@PathVariable("currentcount") Integer currentcount){
+		System.out.println("In updateDashboard controller");
+		dashboardRepository.updateCurrentPassed(currentcount, id);
+		return dashboardRepository.findOne(id);
+	}
 	
 	@RequestMapping(value="/updatepasscount/{id}/{passcount}", method=RequestMethod.PUT)
 	public @ResponseBody Dashboard updateDashboardPassCount(@PathVariable("id") Integer id,@PathVariable("passcount") Integer passcount){

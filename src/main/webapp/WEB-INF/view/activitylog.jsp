@@ -35,3 +35,13 @@
 <tbody>
 </tbody>
 </table>
+<script>
+
+
+function getActivityLog(){
+	location.reload(); 
+	
+}
+
+window.setInterval( "getActivityLog()", 10000);
+</script>

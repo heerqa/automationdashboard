@@ -8,6 +8,9 @@
 	
  <http use-expressions="true">
   <intercept-url pattern="/automationdashboard**" access="hasRole('ROLE_USER')" />
+  <intercept-url pattern="/runningtestdetails/**" access="hasRole('ROLE_USER')" />
+  <intercept-url pattern="/activitylog/**" access="hasRole('ROLE_USER')" />
+  <intercept-url pattern="/deletesingletest/**" access="hasRole('ROLE_USER')" />
    <form-login login-page='/login.html'/>
   <logout logout-url="/logout"/>
 </http>

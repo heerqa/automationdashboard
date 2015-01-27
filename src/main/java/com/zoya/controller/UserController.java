@@ -58,21 +58,21 @@ public class UserController {
 		return "The Dashboard is deleted";
 	}
 	
-	@RequestMapping(value="{id}/runningtestdetails")
+	@RequestMapping(value="runningtestdetails/{id}")
 	public String viewRunningTestDetails(@PathVariable("id") Integer id, Model model){
 		List<DashboardTestRun> dashboardTestRun=dashboardTestRunRepository.getAllRunningTest(id);
 		model.addAttribute("dashboardTestRun", dashboardTestRun);
 		return "runningtestdetails";
 	}
 	
-	@RequestMapping(value="{id}/activitylog")
+	@RequestMapping(value="activitylog/{id}")
 	public String viewActivitylog(@PathVariable("id") Integer id, Model model){
 		List<ActivityLog> activityLog=activityLogRepository.getActivityLog(id);
 		model.addAttribute("activityLog", activityLog);
 		return "activitylog";
 	}
 	
-	@RequestMapping(value="/{id}/deletesingletest")
+	@RequestMapping(value="deletesingletest/{id}")
 	public String deletesingletest(@PathVariable("id") Integer id, Model model){
 		
 		dashboardRepository.delete(id);

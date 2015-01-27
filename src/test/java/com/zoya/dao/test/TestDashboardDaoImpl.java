@@ -16,7 +16,7 @@ import com.zoya.model.Dashboard;
 
 public class TestDashboardDaoImpl {
 	 
-	
+	/*
 	//Dashboard dashboard =new Dashboard("Medical", 34, 6);
 	Dashboard dashboard =new Dashboard("testclassname", "running_method_name", 23, 21, 3, 3);
 	ApplicationContext ctx=new ClassPathXmlApplicationContext("classpath:spring/application-config.xml");
@@ -28,7 +28,7 @@ public class TestDashboardDaoImpl {
 		//dashboardDaoImpl.insertDashbaord(dashboard);
 		System.out.println("TEST: Total rows in the Dashboard table are :" +dashboardDaoImpl.getDahboardList().size());
 		//System.out.println("TEST: Total rows in the Dashboard table are :" +dashboardDaoImpl.getDahboardList().get(0).getTest_passed());
-	}
+	}*/
 	
 	/**
 	 *

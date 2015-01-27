@@ -24,6 +24,11 @@ public void updateBrowserName(@Param("browser")String browser, @Param("id")Integ
 @Query("update Dashboard u set u.test_passed =:test_passed where u.id = :id")
 public void updateTestPassed(@Param("test_passed")Integer test_passed, @Param("id")Integer id);
 
+@Modifying(clearAutomatically = true)
+@Transactional
+@Query("update Dashboard u set u.currenttest =:currenttest where u.id = :id")
+public void updateCurrentPassed(@Param("currenttest")Integer currenttest, @Param("id")Integer id);
+
 
 @Modifying(clearAutomatically = true)
 @Transactional

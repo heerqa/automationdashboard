@@ -14,10 +14,10 @@ import com.zoya.model.User;
 import com.zoya.repositories.DashboardRepository;
 import com.zoya.repositories.UserRepositoty;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:spring/application-config.xml")
+/*@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations="classpath:spring/application-config.xml")*/
 public class UserRepositotyTest {
-	@Autowired
+	/*@Autowired
 	UserRepositoty userRepositoty;
 	@Autowired
 	DashboardRepository DashboardRepository;
@@ -43,5 +43,5 @@ public class UserRepositotyTest {
 		dashboard.setTestclassname("ssfsdfsf");
 		DashboardRepository.save(dashboard);
 		
-	}
+	}*/
 }

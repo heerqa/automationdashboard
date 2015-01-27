@@ -20,7 +20,9 @@
 
 
 <title><tiles:getAsString name="title"></tiles:getAsString>  </title>
-
+<link rel="icon" 
+      type="image/png" 
+      href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQNavDPRnSjAh1s0kXgox4CTCmcaHKSO5JYEEMAvNa5aRWtPEaFVg">
 <style>
 /* GLOBAL STYLES
 -------------------------------------------------- */

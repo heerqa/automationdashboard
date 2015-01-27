@@ -29,16 +29,16 @@
 </thead>
 <c:forEach items="${dashboard}" var="dashboard">
 <tr>
-<td><a href="${dashboard.id}/deletesingletest">
+<td><a href=#>
           <span class="glyphicon glyphicon-trash" onclick="deleteSingleRow('${dashboard.id}')"></span>
-        </a> &nbsp;&nbsp;<a href="${dashboard.id}/runningtestdetails">${dashboard.testclassname} </td>
+        </a> &nbsp;&nbsp;<a href="runningtestdetails/${dashboard.id}">${dashboard.testclassname} </td>
 <td>${dashboard.running_method_name} </td>
 <td>${dashboard.totaltests} </td>
 <td>${dashboard.currenttest} </td>
 <td>${dashboard.test_passed } </td>
 <td>${dashboard.test_failed} </td>
 <td>${dashboard.browsername} </td>
-<td><a href="${dashboard.id}/activitylog">running test logs </td>
+<td><a href="activitylog/${dashboard.id}">running test logs </td>
 <td>${dashboard.rundate} </td>
 
 </tr>
@@ -78,10 +78,12 @@ function refreshDashboard(){
 location.href="<spring:url value="/automationdashboard.html"/>";	
 }
 
+window.setInterval( "refreshDashboard()", 35000);
+
 function deleteSingleRow(id){
 	$(document).ready(function(){
 		  
-	    $.ajax({url:id+"/deletesingletest.html",success:function(result){
+	    $.ajax({url:"/deletesingletest/"+id+".html",success:function(result){
 	    	refreshDashboard();
 	    }
 	  });
