@@ -23,9 +23,9 @@
 </bean>
 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 <property name="driverClassName" value="org.postgresql.Driver"/>
-<property name="url" value="jdbc:postgresql://ec2-54-243-44-191.compute-1.amazonaws.com:5432/d66lhvdp333kqb?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
-<property name="username" value="yuqsnfmclutbpw"/>
-<property name="password" value="xkn-AN68QEsewrMfh404xfRgHO"/>
+<property name="url" value="jdbc:postgresql://ec2-50-16-190-77.compute-1.amazonaws.com:5432/d9v2aol7oe1v51?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
+<property name="username" value="pxdxyrsduewvbf"/>
+<property name="password" value="yk41xyT2RCfSkMxa_kDZnFUSQl"/>
 </bean>
 
 	<!-- Entity Manager -->

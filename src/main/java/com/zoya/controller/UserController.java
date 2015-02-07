@@ -54,7 +54,11 @@ public class UserController {
 	
 	@RequestMapping("/deletdashboard")
 	public @ResponseBody String deletDashboard(Model model){
-		dashboardDao.deleteAllDasboard();
+		//dashboardDao.deleteAllDasboard();
+		activityLogRepository.deleteAll();
+		dashboardTestRunRepository.deleteAll();
+		dashboardRepository.deleteAll();
+		
 		return "The Dashboard is deleted";
 	}
 	
@@ -75,10 +79,12 @@ public class UserController {
 	@RequestMapping(value="deletesingletest/{id}")
 	public String deletesingletest(@PathVariable("id") Integer id, Model model){
 		
-		dashboardRepository.delete(id);
 		
-		dashboardTestRunRepository.deleteTestClassMethods(id);
+		
+		
 		activityLogRepository.deleteTestClassActivity(id);
+		dashboardTestRunRepository.deleteTestClassMethods(id);
+		dashboardRepository.delete(id);
 		
 		return "automationdashboard";
 	}
